@@ -4,7 +4,7 @@ namespace App\Data; // Defines the namespace for this class, organizing it under
 
 class Bar
 {
-    private Foo $foo; // Declares a private property of type Foo.
+    public Foo $foo; // Declares a public property of type Foo.
 
     /**
      * Constructor method that initializes the Foo dependency.
