@@ -16,8 +16,25 @@ Route::get('/learn', function () {
 Route::redirect('/youtube', '/learn');
 
 // Fallback route to handle undefined routes, returning a "404 Not Found" message.
-Route::fallback(function(){
+Route::fallback(function () {
     return "404 Not Found";
+});
+
+// Route definition for the URL '/hello' that returns a view called 'hello' 
+// and passes an associative array with a value for 'name' which will be used inside the view.
+Route::view('/hello', 'hello', ['name' => 'John']);
+
+// Another route definition for the URL '/hello-john' that uses a closure function
+// to return the same 'hello' view with the same 'name' value passed in the array.
+Route::get('/hello-john', function () {
+    return view('hello', ['name' => 'John']);
+});
+
+// Defining a route for the URL '/hello-world'.
+// This route will return a view located in the nested directory 'hello.world' and pass an array containing 'name' => 'World'.
+// The 'name' value will be accessible inside the 'hello/world' view.
+Route::get('/hello-world', function () {
+    return view('hello.world', ['name' => 'World']);
 });
 
 /*
