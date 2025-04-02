@@ -1,0 +1,21 @@
+/* 
+ This CSS file is located in the "public" directory, making it directly accessible 
+ via a URL (e.g., http://yourdomain.com/index.css).
+*/
+
+/* Apply the Arial font to all elements with the "test" class */
+.test {
+    font-family: Arial;
+}
+
+/*
+ Notes:
+ - Unlike CSS files in "resources/css", this file is not processed by Vite.
+ - It can be included in a Blade template using:
+
+   <link rel="stylesheet" href="{{ asset('index.css') }}">
+
+ - Use the "public" folder for styles that do not require preprocessing.
+ - For optimized CSS management (e.g., TailwindCSS, SASS, or PostCSS), it is recommended 
+   to place CSS files in "resources/css" and use Vite for compilation.
+*/

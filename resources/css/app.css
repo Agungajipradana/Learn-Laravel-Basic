@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define a custom CSS class named 'test' that applies the Arial font to elements */
+.test {
+    font-family: Arial;
+}
+
+/* Notes:
+ - This file is used as part of Laravel's frontend setup with Vite.
+ - To include this CSS file in your Blade template, use:
+   @vite(['resources/css/app.css'])
+ - Tailwind CSS is a utility-first CSS framework that allows for rapid styling.
+ - Any additional custom styles can be added here.
+ */
